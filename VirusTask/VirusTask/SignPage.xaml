@@ -1,0 +1,53 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" xmlns:local="clr-namespace:VirusTask.Customized"
+             x:Class="VirusTask.SignPage"
+             BackgroundColor="{DynamicResource BackgroundColor}"
+             xmlns:resource="clr-namespace:VirusTask.Resx">
+
+    <StackLayout Margin="50, 30, 50, 0">
+        <StackLayout Margin="0, 0, 0, 0">
+            <ImageButton Aspect="AspectFill" Margin="0" x:Name="virusImageButton"
+                         BackgroundColor="{DynamicResource PhotoBackground}" BorderColor="{DynamicResource BorderColor}" BorderWidth="0.1" VerticalOptions="Start" HorizontalOptions="Center"
+                         CornerRadius="85" HeightRequest="170" WidthRequest="170" Clicked="ImagePickerTappedAsync"/>
+        </StackLayout>
+        <Frame BackgroundColor="#52BF39" Padding="0" Margin="0, 30, 0, 0" CornerRadius="50" HorizontalOptions="FillAndExpand">
+            <StackLayout Orientation="Horizontal">
+                <local:CustomEntry x:Name="registerFullname" Margin="20, 0, 20, 0" FontSize="16" Placeholder="{x:Static resource:AppResources.resValueFullname}" PlaceholderColor="#E1E1E1" TextColor="#E1E1E1" HorizontalOptions="FillAndExpand"></local:CustomEntry>
+            </StackLayout>
+        </Frame>
+        <Frame BackgroundColor="#52BF39" Padding="0" Margin="0, 10, 0, 0" CornerRadius="50" HorizontalOptions="FillAndExpand">
+            <StackLayout Orientation="Horizontal">
+                <local:CustomEntry x:Name="registerCountry" Margin="20, 0, 20, 0" FontSize="16" Placeholder="{x:Static resource:AppResources.resValueCountry}" PlaceholderColor="#E1E1E1" TextColor="#E1E1E1" HorizontalOptions="FillAndExpand"></local:CustomEntry>
+            </StackLayout>
+        </Frame>
+        <Frame BackgroundColor="#52BF39" Padding="0" Margin="0, 10, 0, 0" CornerRadius="50" HorizontalOptions="FillAndExpand">
+            <StackLayout Orientation="Horizontal">
+                <local:CustomEntry x:Name="registerContinent" Margin="20, 0, 20, 0" FontSize="16" Placeholder="{x:Static resource:AppResources.resValueContinent}" PlaceholderColor="#E1E1E1" TextColor="#E1E1E1" HorizontalOptions="FillAndExpand"></local:CustomEntry>
+            </StackLayout>
+        </Frame>
+        <Frame BackgroundColor="#52BF39" Padding="0" Margin="0, 10, 0, 0" CornerRadius="50" HorizontalOptions="FillAndExpand">
+            <StackLayout Orientation="Horizontal">
+                <local:CustomEntry x:Name="registerYear" Margin="20, 0, 20, 0" FontSize="16" Placeholder="{x:Static resource:AppResources.resValueYear}" PlaceholderColor="#E1E1E1" TextColor="#E1E1E1" HorizontalOptions="FillAndExpand"></local:CustomEntry>
+            </StackLayout>
+        </Frame>
+        <Frame BackgroundColor="#52BF39" Padding="0" Margin="0, 10, 0, 0" CornerRadius="50" HorizontalOptions="FillAndExpand">
+            <StackLayout Orientation="Horizontal">
+                <local:CustomEntry x:Name="registerDomain" Margin="20, 0, 20, 0" FontSize="16" Placeholder="{x:Static resource:AppResources.resValueDomain}" PlaceholderColor="#E1E1E1" TextColor="#E1E1E1" HorizontalOptions="FillAndExpand"></local:CustomEntry>
+            </StackLayout>
+        </Frame>
+        <Frame BackgroundColor="#52BF39" Padding="0" Margin="0, 10, 0, 0" CornerRadius="50" HorizontalOptions="FillAndExpand">
+            <StackLayout Orientation="Horizontal">
+                <local:CustomEntry x:Name="registerMortality" Margin="20, 0, 20, 0" FontSize="16" Placeholder="{x:Static resource:AppResources.resValueMortality}" PlaceholderColor="#E1E1E1" TextColor="#E1E1E1" HorizontalOptions="FillAndExpand"></local:CustomEntry>
+            </StackLayout>
+        </Frame>
+        <Frame BackgroundColor="#52BF39" Padding="0" Margin="0, 10, 0, 0" CornerRadius="50" HorizontalOptions="FillAndExpand">
+            <StackLayout Orientation="Horizontal">
+                <local:CustomEntry x:Name="registerPassword" Margin="20, 0, 20, 0" FontSize="16" MaxLength="20" Placeholder="{x:Static resource:AppResources.resValuePassword}" IsPassword="True" PlaceholderColor="#E1E1E1" TextColor="#E1E1E1" HorizontalOptions="FillAndExpand"></local:CustomEntry>
+            </StackLayout>
+        </Frame>
+        <Button Clicked="RegisterVirus" Text="{x:Static resource:AppResources.resRegister}" FontSize="16" TextColor="#E1E1E1" BackgroundColor="#34972E" Padding="0" Margin="0, 20, 0, 0" HorizontalOptions="FillAndExpand">
+        </Button>
+    </StackLayout>
+
+</ContentPage>

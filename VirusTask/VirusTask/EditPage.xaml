@@ -1,0 +1,57 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+             xmlns:local="clr-namespace:VirusTask.Customized"
+             xmlns:control="clr-namespace:Plugin.CrossPlatformTintedImage.Abstractions;assembly=Plugin.CrossPlatformTintedImage.Abstractions"
+             x:Class="VirusTask.EditPage"
+             BackgroundColor="{DynamicResource BackgroundColor}"
+             xmlns:resource="clr-namespace:VirusTask.Resx">
+    <StackLayout Margin="50, 30, 50, 0">
+        <StackLayout Margin="0, 0, 0, 0">
+            <ImageButton x:Name="virusImageEdit" Aspect="AspectFill" Margin="0" Clicked="ImagePickerEdit" 
+                         BorderColor="{DynamicResource BorderColor}" BorderWidth="0.1" VerticalOptions="Start" HorizontalOptions="Center"
+                         CornerRadius="85" HeightRequest="170" WidthRequest="170"/>
+        </StackLayout>
+        <Frame BackgroundColor="#52BF39" Padding="0" Margin="0, 30, 0, 0" CornerRadius="50" HorizontalOptions="FillAndExpand">
+            <StackLayout Orientation="Horizontal">
+                <local:CustomEntry x:Name="editFullName" Margin="20, 0, 20, 0" FontSize="15" Placeholder="{x:Static resource:AppResources.resValueFullname}" PlaceholderColor="#E1E1E1" TextColor="#E1E1E1" HorizontalOptions="FillAndExpand"></local:CustomEntry>
+            </StackLayout>
+        </Frame>
+        <Frame BackgroundColor="#52BF39" Padding="0" Margin="0, 5, 0, 0" CornerRadius="50" HorizontalOptions="FillAndExpand">
+            <StackLayout Orientation="Horizontal">
+                <local:CustomEntry x:Name="editCountry" Margin="20, 0, 20, 0" FontSize="15" Placeholder="{x:Static resource:AppResources.resValueCountry}" PlaceholderColor="#E1E1E1" TextColor="#E1E1E1" HorizontalOptions="FillAndExpand"></local:CustomEntry>
+            </StackLayout>
+        </Frame>
+        <Frame BackgroundColor="#52BF39" Padding="0" Margin="0, 5, 0, 0" CornerRadius="50" HorizontalOptions="FillAndExpand">
+            <StackLayout Orientation="Horizontal">
+                <local:CustomEntry x:Name="editContinent" Margin="20, 0, 20, 0" FontSize="15" Placeholder="{x:Static resource:AppResources.resValueContinent}" PlaceholderColor="#E1E1E1" TextColor="#E1E1E1" HorizontalOptions="FillAndExpand"></local:CustomEntry>
+            </StackLayout>
+        </Frame>
+        <Frame BackgroundColor="#52BF39" Padding="0" Margin="0, 5, 0, 0" CornerRadius="50" HorizontalOptions="FillAndExpand">
+            <StackLayout Orientation="Horizontal">
+                <local:CustomEntry x:Name="editYear" Margin="20, 0, 20, 0" FontSize="15" Placeholder="{x:Static resource:AppResources.resValueYear}" PlaceholderColor="#E1E1E1" TextColor="#E1E1E1" HorizontalOptions="FillAndExpand"></local:CustomEntry>
+            </StackLayout>
+        </Frame>
+        <Frame BackgroundColor="#52BF39" Padding="0" Margin="0, 5, 0, 0" CornerRadius="50" HorizontalOptions="FillAndExpand">
+            <StackLayout Orientation="Horizontal">
+                <local:CustomEntry x:Name="editDomain" Margin="20, 0, 20, 0" FontSize="15" Placeholder="{x:Static resource:AppResources.resValueDomain}" PlaceholderColor="#E1E1E1" TextColor="#E1E1E1" HorizontalOptions="FillAndExpand"></local:CustomEntry>
+            </StackLayout>
+        </Frame>
+        <Frame BackgroundColor="#52BF39" Padding="0" Margin="0, 5, 0, 0" CornerRadius="50" HorizontalOptions="FillAndExpand">
+            <StackLayout Orientation="Horizontal">
+                <local:CustomEntry x:Name="editMortality" Margin="20, 0, 20, 0" FontSize="15" Placeholder="{x:Static resource:AppResources.resValueMortality}" PlaceholderColor="#E1E1E1" TextColor="#E1E1E1" HorizontalOptions="FillAndExpand"></local:CustomEntry>
+            </StackLayout>
+        </Frame>
+        <Frame BackgroundColor="#52BF39" Padding="0" Margin="0, 5, 0, 0" CornerRadius="50" HorizontalOptions="FillAndExpand">
+            <StackLayout Orientation="Horizontal">
+                <local:CustomEntry x:Name="editVideolik" Margin="20, 0, 20, 0" FontSize="15" Placeholder="{x:Static resource:AppResources.resValueVideolink}" PlaceholderColor="#E1E1E1" TextColor="#E1E1E1" HorizontalOptions="FillAndExpand"></local:CustomEntry>
+            </StackLayout>
+        </Frame>
+        <Frame BackgroundColor="#52BF39" Padding="0" Margin="0, 5, 0, 0" CornerRadius="50" HorizontalOptions="FillAndExpand">
+            <StackLayout Orientation="Horizontal">
+                <local:CustomEntry x:Name="editPassword" Margin="20, 0, 20, 0" FontSize="15" MaxLength="20" Placeholder="{x:Static resource:AppResources.resValuePassword}" PlaceholderColor="#E1E1E1" TextColor="#E1E1E1" HorizontalOptions="FillAndExpand"></local:CustomEntry>
+            </StackLayout>
+        </Frame>
+        <control:TintedImage x:Name="btnSave" TintColor="{DynamicResource TintColor}" Source="floppydisk.png" HeightRequest="40" Margin="0, 10, 0, 0" HorizontalOptions="EndAndExpand"></control:TintedImage>
+    </StackLayout>
+</ContentPage>

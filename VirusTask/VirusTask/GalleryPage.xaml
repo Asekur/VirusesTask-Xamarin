@@ -1,0 +1,34 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+             xmlns:control="clr-namespace:Plugin.CrossPlatformTintedImage.Abstractions;assembly=Plugin.CrossPlatformTintedImage.Abstractions"
+             x:Class="VirusTask.GalleryPage"
+             BackgroundColor="{DynamicResource BackgroundColor}">
+    <ContentPage.Content>
+        <StackLayout>
+            <ListView x:Name="listImages" Background="{DynamicResource BackgroundColor}" ItemsSource="{Binding Images}" RowHeight="300">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <StackLayout>
+                                <Frame CornerRadius="30" WidthRequest="60" HeightRequest="300" BorderColor="{DynamicResource BorderColor}"
+                                       BackgroundColor="Transparent" HasShadow="False"
+                                       Margin="30, 20, 30, 0" Padding="0" IsClippedToBounds="True">
+                                    <Image Source="{Binding imageSourceGallery}" Aspect="AspectFill" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand"/>
+                                </Frame>
+                            </StackLayout>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+            <StackLayout x:Name="toolbarGallery">
+                <Frame BackgroundColor="#34972E" HeightRequest="25">
+                    <StackLayout Orientation="Horizontal">
+                        <control:TintedImage x:Name="btnAddGallery" TintColor="#E1E1E1" Source="add.png" HeightRequest="50" Margin="0, -8, 8, -8" HorizontalOptions="EndAndExpand"></control:TintedImage>
+                    </StackLayout>
+                </Frame>
+            </StackLayout>
+        </StackLayout>
+        
+    </ContentPage.Content>
+</ContentPage>

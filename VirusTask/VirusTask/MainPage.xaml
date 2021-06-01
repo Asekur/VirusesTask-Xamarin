@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+             xmlns:local="clr-namespace:VirusTask.Customized"
+             x:Class="VirusTask.MainPage"
+             BackgroundColor="{DynamicResource BackgroundColor}"
+             xmlns:resource="clr-namespace:VirusTask.Resx">
+
+    <StackLayout  Margin="50, 110, 50, 0">
+        <Image Source="virus.png" Margin="45, 0, 45, 0"></Image>
+        <Frame BackgroundColor="#52BF39" Padding="0" Margin="0, 30, 0, 0" CornerRadius="50" HorizontalOptions="FillAndExpand">
+            <StackLayout Orientation="Horizontal">
+                <local:CustomEntry x:Name="entryFullname" Margin="20, 0, 20, 0" FontSize="16" Placeholder="{x:Static resource:AppResources.resValueFullname}" PlaceholderColor="#E1E1E1" TextColor="#E1E1E1" HorizontalOptions="FillAndExpand"></local:CustomEntry>
+            </StackLayout>
+        </Frame>
+        <Frame BackgroundColor="#52BF39" Padding="0" Margin="0, 10, 0, 0" CornerRadius="50" HorizontalOptions="FillAndExpand">
+            <StackLayout Orientation="Horizontal">
+                <local:CustomEntry x:Name="entryPassword" Margin="20, 0, 20, 0" FontSize="16" MaxLength="20" Placeholder="{x:Static resource:AppResources.resValuePassword}" IsPassword="True" PlaceholderColor="#E1E1E1" TextColor="#E1E1E1" HorizontalOptions="FillAndExpand"></local:CustomEntry>
+            </StackLayout>
+        </Frame>
+        <Button Clicked="ClickAuthorize" Text="{x:Static resource:AppResources.resAuthorize}" FontSize="16" TextColor="#E1E1E1" BackgroundColor="#34972E" Padding="0" Margin="0, 50, 0, 0" HorizontalOptions="FillAndExpand">
+        </Button>
+        <Label x:Name="lableRegister" Text="{x:Static resource:AppResources.resGoRegister}" Margin="0, 5, 0, 0"  HorizontalOptions="CenterAndExpand" TextColor="{DynamicResource TextColor}">
+        </Label>
+    </StackLayout>
+
+</ContentPage>

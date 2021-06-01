@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+             x:Class="VirusTask.SettingsPage"
+             Title="{x:Static resource:AppResources.resTabSettings}"
+             xmlns:resource="clr-namespace:VirusTask.Resx">
+    <ContentPage.Content>
+        <StackLayout Margin="50, 80, 50, 20">
+            <FlexLayout>
+                <Frame WidthRequest="140" BackgroundColor="Transparent" BorderColor="{DynamicResource BorderColor}" Padding="0" Margin="0, 30, 0, 0" CornerRadius="50" HorizontalOptions="FillAndExpand">
+                    <StackLayout Orientation="Horizontal">
+                        <Label x:Name="labelDarkmode" Margin="20, 13, 20, 13" FontSize="16" Text="{x:Static resource:AppResources.resDarkmode}" TextColor="{DynamicResource TextColor}" HorizontalOptions="FillAndExpand"></Label>
+                    </StackLayout>
+                </Frame>
+                <Slider x:Name="sliderMode" ThumbColor="{DynamicResource ThumbColor}" MaximumTrackColor="{DynamicResource MaximumTrackColor}" MinimumTrackColor="{DynamicResource MinimumTrackColor}" WidthRequest="100" Margin="35, 30, 20, 0" Minimum="0" Maximum="1" HorizontalOptions="FillAndExpand"></Slider>
+            </FlexLayout>
+            <FlexLayout>
+                <Frame WidthRequest="140" BackgroundColor="Transparent" BorderColor="{DynamicResource BorderColor}" Padding="0" Margin="0, 10, 0, 0" CornerRadius="50" HorizontalOptions="FillAndExpand">
+                    <StackLayout Orientation="Horizontal">
+                        <Label x:Name="labelFont" Margin="20, 13, 20, 13" FontSize="16" Text="{x:Static resource:AppResources.resFont}" TextColor="{DynamicResource TextColor}" HorizontalOptions="FillAndExpand"></Label>
+                    </StackLayout>
+                </Frame>
+                <Slider x:Name="sliderFont" ThumbColor="{DynamicResource ThumbColor}" MaximumTrackColor="{DynamicResource MaximumTrackColor}" MinimumTrackColor="{DynamicResource MinimumTrackColor}" WidthRequest="100" Margin="35, 10, 20, 0" Minimum="0" Maximum="2" HorizontalOptions="FillAndExpand"></Slider>
+            </FlexLayout>
+            
+            <FlexLayout  Margin="0, 30, 0, 0" Direction="Row">
+                <Button x:Name="btnEnglish" Text="{x:Static resource:AppResources.resBtnEnglish}" Clicked="ChangeLanguage" WidthRequest="140" FontSize="16" TextColor="#E1E1E1" CornerRadius="30" BackgroundColor="#34972E" Padding="0" Margin="0, 0, 10, 0" HorizontalOptions="Start">
+                </Button>
+                <Button x:Name="btnRussia" Text="{x:Static resource:AppResources.resBtnRasha}" Clicked="ChangeLanguage" WidthRequest="140" FontSize="16" TextColor="#E1E1E1" CornerRadius="30" BackgroundColor="#34972E" Padding="0" Margin="10, 0, 0, 0" HorizontalOptions="End">
+                </Button>
+            </FlexLayout>
+            <Button x:Name="btnLogout" Clicked="LogoutVirus" Text="{x:Static resource:AppResources.resLogout}" FontSize="16" TextColor="#E1E1E1" BackgroundColor="#34972E" Padding="0" Margin="0, 80, 0, 0" HorizontalOptions="FillAndExpand">
+            </Button>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

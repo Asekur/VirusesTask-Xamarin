@@ -1,0 +1,42 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+             xmlns:control="clr-namespace:Plugin.CrossPlatformTintedImage.Abstractions;assembly=Plugin.CrossPlatformTintedImage.Abstractions"
+             xmlns:resource="clr-namespace:VirusTask.Resx"
+             x:Class="VirusTask.ItemsPage"
+             Title="{x:Static resource:AppResources.resTabItems}"
+             Background="{DynamicResource BackgroundColor}">
+    <ContentPage.Content>
+        <StackLayout>
+            <ListView x:Name="listView" Background="{DynamicResource BackgroundColor}" ItemsSource="{Binding Viruses}" IsPullToRefreshEnabled="True" RowHeight="80" ItemSelected="OnItemSelected">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <StackLayout Orientation="Horizontal">
+                                <Frame CornerRadius="30" WidthRequest="60" BorderColor="{DynamicResource BorderColor}"
+                                       BackgroundColor="Transparent" HasShadow="False"
+                                       Margin="20,10" Padding="0" IsClippedToBounds="True">
+                                    <Image Source="{Binding imageSource}" Aspect="AspectFill" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand"/>
+                                </Frame>
+                                <Frame WidthRequest="100" BackgroundColor="Transparent" BorderColor="{DynamicResource BorderColor}" Padding="0" Margin="0, 15, 30, 10" CornerRadius="50" HorizontalOptions="FillAndExpand">
+                                    <StackLayout Orientation="Vertical">
+                                        <Label Text="{Binding Name}" TextColor="{DynamicResource TextColor}" HorizontalTextAlignment="Center" FontSize="16" VerticalOptions="Center" Margin="0, 5, 0, 0" HorizontalOptions="Center"></Label>
+                                        <Label Text="{Binding DomainAndYear}" TextColor="{DynamicResource TextColor}" HorizontalTextAlignment="Center" FontSize="16" VerticalOptions="Center" Margin="0, -5, 0, 0" HorizontalOptions="Center"></Label>
+                                    </StackLayout>
+                                </Frame>
+                            </StackLayout>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+            <StackLayout x:Name="toolbarEdit">
+                <Frame BackgroundColor="#34972E" HeightRequest="25">
+                    <StackLayout Orientation="Horizontal">
+                        <control:TintedImage x:Name="btnEdit" TintColor="#E1E1E1" Source="feather.png" HeightRequest="50" Margin="0, -8, 8, -8" HorizontalOptions="EndAndExpand"></control:TintedImage>
+                        <control:TintedImage x:Name="btnFilter" TintColor="#E1E1E1" Source="filter.png" HeightRequest="50" Margin="0, -8, 0, -8" HorizontalOptions="End"></control:TintedImage>
+                    </StackLayout>
+                </Frame>
+            </StackLayout>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

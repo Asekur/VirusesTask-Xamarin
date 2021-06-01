@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="VirusTask.FiltersItemsPage"
+             Background="{DynamicResource BackgroundColor}">
+    <ContentPage.Content >
+        <StackLayout>
+            <ListView x:Name="listView" ItemsSource="{Binding Viruses}" IsPullToRefreshEnabled="True" RowHeight="80" ItemSelected="OnItemFilterSelected">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <StackLayout Orientation="Horizontal">
+                                <Frame CornerRadius="30" WidthRequest="60" BorderColor="{DynamicResource BorderColor}"
+                                       BackgroundColor="Transparent" HasShadow="False"
+                                       Margin="20,10" Padding="0" IsClippedToBounds="True">
+                                    <Image Source="{Binding imageSource}" Aspect="AspectFill" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand"/>
+                                </Frame>
+                                <Frame WidthRequest="100" BackgroundColor="Transparent" BorderColor="{DynamicResource BorderColor}" Padding="0" Margin="0, 15, 30, 10" CornerRadius="50" HorizontalOptions="FillAndExpand">
+                                    <StackLayout Orientation="Vertical">
+                                        <Label Text="{Binding Name}" TextColor="{DynamicResource TextColor}" HorizontalTextAlignment="Center" FontSize="16" VerticalOptions="Center" Margin="0, 5, 0, 0" HorizontalOptions="Center"></Label>
+                                        <Label Text="{Binding DomainAndYear}" TextColor="{DynamicResource TextColor}" HorizontalTextAlignment="Center" FontSize="16" VerticalOptions="Center" Margin="0, -5, 0, 0" HorizontalOptions="Center"></Label>
+                                    </StackLayout>
+                                </Frame>
+                            </StackLayout>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+            <StackLayout x:Name="toolbarEdit">
+                <Frame BackgroundColor="#34972E" HeightRequest="25">
+                </Frame>
+            </StackLayout>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
